@@ -1,0 +1,209 @@
+#root {
+  background: black;
+  padding: 20px;
+}
+
+.poi-listing-container {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+}
+
+.controls-container {
+  display: flex;
+  width: 20%;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 15px;
+  flex-wrap: wrap;
+  padding: 20px;
+  background: #f0f0f0;
+}
+
+.filter-control {
+  /* flex-grow: 3; */
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.drive-container,
+.under-mile-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.under-mile-container {
+  padding-top: 0;
+}
+
+.fav-container {
+  background-repeat: no-repeat;
+  flex-basis: 40px;
+  display: block;
+  height: 25px;
+}
+
+.rating-container {
+  margin-left: auto;
+  margin-top: 7px;
+}
+
+.poi-container {
+  margin-bottom: 100px;
+  /* border-top: 1px solid #333; */
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 15px;
+  width: 20%;
+  margin: 0 auto 20px auto;
+  background: #f0f0f0;
+}
+
+.poi-container.selected {
+  box-shadow: 1px 0px 2px 1px #000414;
+}
+
+.info-container {
+  font-size: 18px;
+}
+
+.view-map {
+  width: 100%;
+  background: white;
+  color: black;
+  box-shadow: 0;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.poi-container.selected .view-map {
+  background: black;
+  color: white;
+}
+
+.view-map:hover,
+.view-map:focus {
+  cursor: pointer;
+  background: #c9c9c9;
+}
+
+.poi-container.selected .view-map:focus,
+.poi-container.selected .view-map:hover {
+  cursor: default;
+}
+
+.filter-container {
+  /* width: 50%;  */
+  /* margin: 0 auto; */
+}
+
+.site-link {
+  margin: 20px auto;
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.poi-container.selected .site-link {
+  background: white;
+  color: black;
+  text-decoration: none;
+}
+
+.poi-container.selected .site-link:focus,
+.poi-container.selected .site-link:hover {
+  cursor: pointer;
+  background: #c9c9c9;
+}
+
+
+.img-container {
+  width: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  text-align: center;
+  background: black;
+  border-radius: 60px 24px 70px 20px;
+  border-radius: 50%;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+}
+
+.img-container image {
+  background: #999;
+  border-radius: 15px;
+  width: 75%;
+}
+
+.img-container.als {
+  background: #005842;
+  border: 2px solid black;
+  background-size: 190px;
+}
+
+.img-container.sabroso {
+  background-size: 170px;
+}
+
+.img-container.sabroso img {
+  width: 80%;
+}
+
+.img-container.gingerman {
+  background-size: 165px;
+}
+
+.img-container.gingerman img {
+  padding: 10px;
+}
+
+.NEAcquarium.img-container {
+  border: 1px solid black;
+  background: white;
+}
+
+.NEAcquarium img {
+  background: white;
+}
+
+.bteaParty.img-container {
+  background-size: 175px;
+}
+
+.bteaParty.img-container img {
+  padding: 10px;
+}
+
+.lamplighter.img-container {
+  border: 1px solid black;
+  background: white;
+  background-size: 175px;
+}
+
+.lamplighter.img-container img {
+  width: 80%;
+  padding: 10px;
+}
+
+.paradiseRockClub.img-container {
+  background: white;
+  border: 1px solid black;
+  background-size: 210px;
+}
+
+.gillette.img-container {
+  background: white;
+  border: 1px solid black;
+  background-size: 180px;
+}
+
+.gillette.img-container img {
+  width: 80%;
+  padding: 10px;
+}
