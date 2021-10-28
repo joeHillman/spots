@@ -1,3 +1,7 @@
+html {
+  background: black;
+}
+
 #root {
   background: black;
   padding: 20px;
@@ -9,6 +13,7 @@
 }
 
 .controls-container {
+  position: fixed;
   display: flex;
   width: 20%;
   margin: 0 auto;
@@ -62,11 +67,12 @@
 }
 
 .poi-container.selected {
-  box-shadow: 1px 0px 2px 1px #000414;
+  box-shadow: 1px 0px 3px 1px inset #333;
 }
 
 .info-container {
   font-size: 18px;
+  margin-top: 30px;
 }
 
 .view-map {
@@ -123,6 +129,7 @@
 
 
 .img-container {
+  position: relative;
   width: 50%;
   width: 200px;
   height: 200px;
@@ -139,6 +146,20 @@
   background: #999;
   border-radius: 15px;
   width: 75%;
+}
+
+.img-container:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-top: 25px solid black;
+  position: absolute;
+  left: 38%;
+  bottom: -47px;
 }
 
 .img-container.als {
@@ -206,4 +227,54 @@
 .gillette.img-container img {
   width: 80%;
   padding: 10px;
+}
+
+
+.transit-container {
+  display: flex;
+  background: white;
+  margin-bottom: 15px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.tLogo {
+  background-repeat: no-repeat;
+  width: 55px;
+}
+
+.transit-lines {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.line {
+  width: 100%;
+  height: 20px;
+  display: block;
+}
+
+.line + .line {
+  margin-top: 5px;
+}
+
+.green {
+  background-color: #00843d;
+}
+
+.red {
+  background-color: #da291c;
+}
+
+.orange {
+  background-color: #ed8b00;
+}
+
+.blue {
+  background-color: #003da5;
+}
+
+.commuter {
+  background-color: #80276c;
 }

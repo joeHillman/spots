@@ -14,6 +14,7 @@ import paradiseRockClub from './paradiseRockClub.png';
 import sabroso from './sabroso.png';
 
 import like from './Like.svg';
+import tLogo from './tLogo.svg';
 
 const CategoryFilter = (props) => {
   const { venueJSON } = props;
@@ -70,10 +71,43 @@ const CategoryFilter = (props) => {
     }
   }
 
+  const buildTransitLines = (arr) => {
+    const linesToDisplay = [];
+      if(arr.length < 1) {
+        console.log('noOptions')
+        linesToDisplay.push(<span className="line no-options">No transit options available</span>)
+      }
+
+      if(arr.includes('green')) {
+        linesToDisplay.push(<span className='line green'></span>)
+      }
+
+      if(arr.includes('red')) {
+        linesToDisplay.push(<span className='line red'></span>)
+      }
+      
+      if(arr.includes('orange')) {
+        linesToDisplay.push(<span className='line orange'></span>)
+      }
+      
+      if(arr.includes('blue')) {
+        linesToDisplay.push(<span className='line blue'></span>)
+      }
+      
+      if(arr.includes('commuter')) {
+        linesToDisplay.push(<span className='line commuter'></span>)
+      }
+    return linesToDisplay;
+  }
+
   return (
     <div className="filter-container">
       <div className="poi-listing-container">
         <div className="controls-container">
+          <div style={{display: 'flex', flexDirection: 'column', width: '80%', margin: '0 auto'}}>
+            <h2 style={{marginBottom: '0'}}>SPOTS</h2>
+            <h3 style={{marginTop: '0'}}>by the Boston Globe</h3>
+          </div>
           <p className="filter-control">Begin by selecting a filter if desired. You can further narrow a results set by enabling the driving and/or under 1 mile checkboxes.</p>          
           <select className="filter-control" onChange={handleSelectListChange}>
             <option value='all'>View all</option>
@@ -111,9 +145,13 @@ const CategoryFilter = (props) => {
                   {/* <img src={imagePicker(item.image)} alt={item.name}/> */}
                 </div>
                 <div className="info-container">
-                  <p>{`${item.name} is a ${convertKMtoMiles(item[walkOrDrive][0].distance.text)} mile ${walkOrDrive === 'distanceDriving' ? 'drive' : 'walk'} from Exchange Place.`}<br />
+                  <p>{`${item.name} is a ${convertKMtoMiles(item[walkOrDrive][0].distance.text)} mile ${walkOrDrive === 'distanceDriving' ? 'drive' : 'walk'} from your location.`}<br />
                     This journey, {walkOrDrive === 'distanceDriving' ? 'DRIVING' : 'WALKING'}, will take you {`${item[walkOrDrive][0].duration.text}`}
                   </p>
+                  <div className="transit-container">
+                    <div className='tLogo' style={{backgroundImage: `url(${tLogo})`}}></div>
+                    <div className='transit-lines'>{buildTransitLines(item.transit)}</div>
+                  </div>
                   <button className="view-map" type="button" onClick={props.captureSelection} value={item.name} data-name={`${item.image}`}>View map</button>
                   {item.relatedLinks.length > 0 && 
                     (<div className="related-container">

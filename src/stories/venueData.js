@@ -18,6 +18,7 @@ const venueData = [
     favorite: true,
     rating: '3/5',
     image: 'als',
+    transit: ['orange', 'blue'],
     distanceWalking: [
       {
           "distance" : {
@@ -55,6 +56,7 @@ const venueData = [
     favorite: true,
     rating: '5/5',    
     image: 'sabroso',
+    transit: ['orange'],
     distanceWalking: [
         {
             "distance" : {
@@ -91,6 +93,7 @@ const venueData = [
     relatedLinks:[],
     favorite: false,
     image: 'bteaParty',
+    transit: ['commuter', 'red'],
     distanceWalking: [
       {
           "distance" : {
@@ -126,6 +129,7 @@ const venueData = [
     website: 'https://www.neaq.org/',
     relatedLinks:[],
     image: 'NEAcquarium',
+    transit: ['blue'],
     distanceWalking: [
       {
           "distance" : {
@@ -163,6 +167,7 @@ const venueData = [
     favorite: true,
     rating: '4/5',     
     image: 'gingerman',
+    transit: ['orange', 'blue'],
     distanceWalking: [
       {
           "distance" : {
@@ -198,6 +203,7 @@ const venueData = [
     website: 'https://crossroadspresents.com/pages/paradise-rock-club',
     relatedLinks:['https://www.boston.com/things-to-do/princess-nokia-paradise-rock-club-boston-october-27/'],
     image: 'paradiseRockClub',
+    transit: ['green'],
     distanceWalking: [
       {
           "distance" : {
@@ -235,6 +241,7 @@ const venueData = [
     favorite: false,
     rating: '3/5',
     image: 'gillette',
+    transit: [],
     distanceWalking: [
       {
           "distance" : {
@@ -270,6 +277,7 @@ const venueData = [
     website: 'https://lamplighterbrewing.com/',
     relatedLinks:['https://www.boston.com/things-to-do/fall-harvest-brewery-picnic-lamplighter-brewing-october-27/'],
     image: 'lamplighter',
+    transit: ['red'],
     distanceWalking: [
       {
           "distance" : {
